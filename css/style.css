@@ -139,8 +139,8 @@ h6 {
 .menu__item:hover .menu__sublist {
   opacity: 1;
   visibility: visible;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%)
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%)
 }
 .menu__link {
   width: 100%;
@@ -151,13 +151,13 @@ h6 {
 .menu__sublist {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   transition: all .3s ease 0s;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateY(50%);
-  transform: translateY(50%)
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%)
 }
 .menu__sublink {
   width: 100%;
@@ -904,6 +904,11 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center
+  }
+  .menu__item:active .menu__sublist,
+  .menu__item:hover .menu__sublist {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
   }
   .menu__sublist {
     position: relative;
